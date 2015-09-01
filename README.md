@@ -19,7 +19,7 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 grunt.loadNpmTasks('emp.ria-grunt-jsbuild3');
 ```
 
-## The "emp_ria_grunt_jsbuild3" task
+## The "jsbuild3" task
 
 ### Overview
 In your project's Gruntfile, add a section named `emp_ria_grunt_jsbuild3` to the data object passed into `grunt.initConfig()`.
