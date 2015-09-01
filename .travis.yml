@@ -1,23 +1,19 @@
 language: node_js
 node_js:
-  - "0.10"
-  - "0.12"
-  - "iojs"
-
-# Use faster Docker architecture on Travis.
+- '0.10'
+- '0.12'
+- iojs
 sudo: false
-
 before_script:
-  - npm install -g grunt-cli
-
-script:     
-  - grunt version --tag=$TRAVIS_TAG --build=$TRAVIS_BUILD_NUMBER
-  - npm test
-
+- npm install -g grunt-cli
+script:
+- grunt version --tag=$TRAVIS_TAG --build=$TRAVIS_BUILD_NUMBER
+- npm test
 deploy:
   provider: npm
   email: viatsyshyn@gmail.com
-  api_key: "YOUR API KEY"
+  api_key:
+    secure: cndqpJtU8WR3KQ/ZCMc8i5ntGMk+Oq0GYluMfFDOt7MUwSYJvZl5S+9zS9ZgtMue6sMjbuvelCbUHR6Lv9QEklLlRXKZTIzxKGS/+KFnIfVEtoLjTlXE8V7F1tRiRCvx7SsO573N5MOkrPlMexgiiKk3BgJusG3o/uRH1/6mkkdqn1nU8aSrXB/Et2/bCZCpR+gFmP9upRfs/Yq2Gk7UyQFshfmboNU9OVQhXqG/7O/fJvsYGaJ7zesejy2+2uOQCVWzPxcB+5RlKH82cb3gE1o6m3vH+eh3sfkydtaFFaDPQT0C3DzfrqvaYWfyVc+Im1ow48ZQUlPMBd1Iz2v0npnFTxfmzUEQJ07FsgWIQm3LVQmQBTfov9GC0enCsQgncPtZHAF6+aUkUrAuyovSY/kezKiYQC4ap3D/wyFKWWE7cl8SvCt3IjDX8lLg5zHQiY0OmtI9rGSyGvIW9r2GH2FxIWCLSGtNh8AkQMWAvj8QKxlNGydpR95Tb3kPXErUxVsgR3hpLqgRXgAOpKCKt8ZSwHrTv9k/pLiFirRawrVEIaQaGxdv8djwMZHhsD10i2fbbaPw5UqhLdRHnZ5fWidt8yfHZeuaT/1r2buu+WvZW8NqRHEA9d2KSMZu3iNAKP2zLN7qmY1e4OMLxA3vQfkh3jMokS5AliZfddoTJPw=
   on:
     tags: true
-    branch: master
+    repo: viatsyshyn/grunt-jsbuild3
