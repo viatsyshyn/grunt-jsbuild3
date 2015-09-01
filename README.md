@@ -22,7 +22,7 @@ grunt.loadNpmTasks('emp.ria-grunt-jsbuild3');
 ## The "jsbuild3" task
 
 ### Overview
-In your project's Gruntfile, add a section named `emp_ria_grunt_jsbuild3` to the data object passed into `grunt.initConfig()`.
+In your project's Gruntfile, add a section named `jsbuild3` to the data object passed into `grunt.initConfig()`.
 
 ```js
 grunt.initConfig({
