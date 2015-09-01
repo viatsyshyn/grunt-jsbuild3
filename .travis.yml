@@ -3,7 +3,6 @@ node_js:
 - '0.12'
 sudo: false
 before_script:
-- npm install -g npm@next
 - npm install -g grunt-cli
 script:
 - grunt replace:version --tag=$TRAVIS_TAG --build=$TRAVIS_BUILD_NUMBER
