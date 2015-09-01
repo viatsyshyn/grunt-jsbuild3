@@ -10,6 +10,7 @@ script:
 - grunt test
 before_deploy:
 - grunt replace:version --tag=$TRAVIS_TAG --build=$TRAVIS_BUILD_NUMBER
+- npm unpublish emp.ria-grunt-jsbuild3@$TRAVIS_TAG
 deploy:
   provider: npm
   email: viatsyshyn@gmail.com
