@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+  - "0.10"
+  - "0.12"
+  - "iojs"
+
+# Use faster Docker architecture on Travis.
+sudo: false
+
+before_script:
+  - npm install -g grunt-cli
+
+script:     
+  - grunt version --tag=$TRAVIS_TAG --build=$TRAVIS_BUILD_NUMBER
+  - npm test
+
+deploy:
+  provider: npm
+  email: viatsyshyn@gmail.com
+  api_key: "YOUR API KEY"
+  on:
+    tags: true
+    branch: master
