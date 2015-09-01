@@ -27,8 +27,9 @@ exports.jsbuild3 = {
     // setup here if necessary
     done();
   },
-  default_options: function(test) {
-    test.expect(0);
+  jsbuild3: function(test) {
+    test.expect(1);
+    test.ok(true, "this is ok");
     test.done();
   }
 };
