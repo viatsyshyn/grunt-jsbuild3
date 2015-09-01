@@ -14,7 +14,7 @@ module.exports = function(grunt) {
   var build_tag = grunt.option("tag") || '0.0';
 
   var pkg = grunt.file.readJSON('package.json');
-  pkg.version = [build_tag, build_number].join('.') || pkg.version;
+  pkg.version = build_tag || pkg.version;
 
   // Project configuration.
   grunt.initConfig({
