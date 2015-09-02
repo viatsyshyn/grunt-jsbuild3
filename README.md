@@ -1,8 +1,9 @@
 # emp.ria-grunt-jsbuild3
 
-> EMP RIA Jsbuild3 Gruntjs plugin
+EMP RIA Jsbuild3 Gruntjs plugin, see more at https://travis-ci.org/viatsyshyn/jsbuild3
 
 [![Build Status](https://travis-ci.org/viatsyshyn/grunt-jsbuild3.png)](https://travis-ci.org/viatsyshyn/grunt-jsbuild3)
+[![NPM version](https://img.shields.io/npm/v/emp.ria-grunt-jsbuild3.svg?style=flat)](https://travis-ci.org/viatsyshyn/grunt-jsbuild3)
 
 ## Getting Started
 This plugin requires Grunt `~0.4.2`
