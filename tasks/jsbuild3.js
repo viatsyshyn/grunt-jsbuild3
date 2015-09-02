@@ -23,13 +23,12 @@ module.exports = function (grunt) {
             config: 'jsbuild.json',
             modules: []
         });
-        
+
         var logger = {
-          info: function () { grunt.log.ok.apply(null, arguments); },
+          info: function () { grunt.log.write.apply(null, arguments); },
           warn: function () { grunt.log.subhead.apply(null, arguments); },
-          log: function () { grunt.log.write.apply(null, arguments); },
-          debug: function () { grunt.log.debug.apply(null, arguments); },
-          error: function () { grunt.log.error.apply(null, arguments); },
+          log: function () { grunt.log.debug.apply(null, arguments); },
+          error: function () { grunt.log.error.apply(null, arguments); }
         };
 
         JsBuild3(ARGS.config, ARGS.modules, done, logger);
